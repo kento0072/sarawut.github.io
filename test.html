@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 2-Month Anniversary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #ff69b4; /* Pink text */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow: hidden; /* Hide overflow to prevent scrollbars */
+        }
+        header {
+            padding: 20px;
+            background-color: #ff69b4; /* Pink background */
+            color: white;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            position: relative;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .heart-center {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #ff0000;
+            transform: rotate(1deg);
+            animation: pulse 1s infinite;
+        }
+        .heart-center:before,
+        .heart-center:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #ff0000;
+            border-radius: 50%;
+        }
+        .heart-center:before {
+            top: -20px;
+            left: 0;
+        }
+        .heart-center:after {
+            left: 20px;
+            top: 0;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1) rotate(315deg);
+            }
+            50% {
+                transform: scale(1.2) rotate(315deg);
+            }
+            100% {
+                transform: scale(1) rotate(315deg);
+            }
+        }
+        .floating-heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff69b4;
+            transform: rotate(45deg);
+            animation: float 5s infinite ease-in-out;
+        }
+        .floating-heart:before,
+        .floating-heart:after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff69b4;
+            border-radius: 50%;
+        }
+        .floating-heart:before {
+            top: -10px;
+            left: 0;
+        }
+        .floating-heart:after {
+            left: 10px;
+            top: 0;
+        }
+        @keyframes float {
+            0% {
+                bottom: 0;
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                bottom: 100%;
+                opacity: 0;
+            }
+        }
+        .message {
+            margin: 20px;
+            font-size: 1.5em;
+        }
+        .song {
+            margin-top: 20px;
+        }
+        footer {
+            margin-top: 40px;
+            padding: 10px;
+            background-color: #ff69b4;
+            color: white;
+        }
+
+        /* Responsive design for mobile devices */
+        @media only screen and (max-width: 600px) {
+            .gallery img {
+                width: 150px;
+            }
+            .message {
+                font-size: 1.2em;
+                padding: 0 10px;
+            }
+            .heart-center {
+                width: 30px;
+                height: 30px;
+            }
+            .heart-center:before,
+            .heart-center:after {
+                width: 30px;
+                height: 30px;
+            }
+            .floating-heart {
+                width: 15px;
+                height: 15px;
+            }
+            .floating-heart:before,
+            .floating-heart:after {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>สุขสันต์วันครบรอบ 2 เดือนนะค้าบเบบี๋~~~~</h1>
+</header>
+
+<section class="gallery">
+    <img src="/learn web/responsive-image-slider-images/images/IMG_20240829_214553_721.jpg" alt="Memorable Moment 1">
+    <div class="heart-center"></div> <!-- Animated heart in the center -->
+    <img src="/learn web/responsive-image-slider-images/images/Screenshot_20240823-192818_1.jpg" alt="Memorable Moment 2">
+</section>
+
+<section class="message">
+    <p>เค้าชอบตอนเบบี๋ยิ้มมากเยย>< เพราะงั้นเบบี๋ยิ้มเยอะๆน้าา มันทำให้เค้าตกหลุมรักบี๋ซ้ำๆมองยังไงก็ไม่มีวันเบื่อ เพราะงั้นอยู่ให้เค้าตกหลุมรักตลอดไปเลยได้มั้ย ถ้าเค้าทำตัวไม่น่ารักเบบี๋บอกเค้านะ เค้าสัญญาว่าจะปรับปรุง เค้ารักเบบี๋มากนะ เพราะงั้นอยู่กับเค้าตลอดไปเลยนะคะ><</p>
+    <!-- You can add more personal messages here -->
+</section>
+
+<section class="song">
+    <audio controls autoplay>
+        <source src="/learn web/SnapSave.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <p>ขอมอบเพลงนี้ให้เบบี๋~~ ♥</p>
+</section>
+
+<footer>
+    <p>จากกอล์ฟสุดหล่อออ</p>
+</footer>
+
+<script>
+    // Function to create floating hearts
+    function createFloatingHeart() {
+        const heart = document.createElement('div');
+        heart.className = 'floating-heart';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = Math.random() * 2 + 3 + 's'; // 3-5 seconds
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 5000); // Remove heart after 5 seconds
+    }
+
+    // Create floating hearts at intervals
+    setInterval(createFloatingHeart, 300);
+</script>
+
+</body>
+</html>
