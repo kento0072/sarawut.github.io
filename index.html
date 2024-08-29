@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaxer</title>
+    <link rel="icon" type="image/x-icon" href="/MindProject/img/Black_Kawaii_Illustration_Gaming_Logo__1_-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href=""><img src="/MindProject/img/Black_Kawaii_Illustration_Gaming_Logo__1_-removebg-preview.png" alt="Logo"></a>
+        <button id="login-button">Login</button>
+        <button id="logout-button" style="display: none;">Logout</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" data-category="all">All Games</a></li>
+            <li><a href="#" data-category="action">Action</a></li>
+            <li><a href="#" data-category="puzzle">Puzzle</a></li>
+            <li><a href="#" data-category="arcade">Arcade</a></li>
+            <li><a href="#" data-category="sports">Sports</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="login-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+            </form>
+        </div>
+        <div id="signup-section" style="display: none;">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <div class="input-group">
+                    <label for="new-username">Username:</label>
+                    <input type="text" id="new-username" name="new-username" required>
+                </div>
+                <div class="input-group">
+                    <label for="new-password">Password:</label>
+                    <input type="password" id="new-password" name="new-password" required>
+                </div>
+                <button type="submit">Sign Up</button>
+                <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+            </form>
+        </div>
+        <div class="banner"><img src="/MindProject/img/att.WKP2_QLwsqtHO014Mi06t8R0-Kh1p9KEvp2zTlj8kXU.jpg" alt=""></div>
+        <div id="game-section" style="display: none;">
+            <h2>Games</h2>
+            <div id="game-list"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Relaxer Games By Sarawut Khambunreuang and cocacola company.</p>
+    </footer>
+    <div id="alert" class="alert">
+        กรุณาล็อกอิน
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
